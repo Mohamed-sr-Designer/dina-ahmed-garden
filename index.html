@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>حديقة الزفاف — أحمد & دينا</title>
+<meta name="description" content="يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا — الجمعة ١٨ ديسمبر ٢٠٢٦، الساعة ٥ عصراً، Villa Garden.">
+<meta property="og:title" content="أحمد & دينا — حديقة الزفاف">
+<meta property="og:description" content="يسرنا دعوتكم لحفل كتب كتاب · الجمعة ١٨ ديسمبر ٢٠٢٦ · ٥ عصراً · Villa Garden">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#f6f2e8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f2e8; --paper-2:#efe9da; --leaf:#2f3d2c; --sage:#7d8f6e; --sage-2:#a9b89a; --blush:#e7c6bb; --rose:#c98f83; --ink:#26301f; --mute:#5c6452;
+  --ease:cubic-bezier(.22,.9,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip;max-width:100%}
+html{background:var(--paper)}
+body{font-family:"IBM Plex Sans Arabic",sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;line-height:1.8;font-weight:300}
+body.locked{overflow:hidden;height:100vh}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .38 0 0 0 0 .3 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+.fr{font-family:"Fraunces",serif;font-style:italic;font-weight:300;direction:ltr;display:inline-block}
+.mz{font-family:"Mirza",serif}
+
+/* ───────── GATE: wreath ───────── */
+.gate{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:var(--paper);overflow:hidden}
+.gate .leafL,.gate .leafR{position:absolute;top:0;bottom:0;width:50.5%;background:var(--paper-2);z-index:0}
+.gate .leafL{left:0}.gate .leafR{right:0}
+.gate .leafL::after,.gate .leafR::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:rgba(47,61,44,.12)}
+.gate .leafL::after{right:0}.gate .leafR::after{left:0}
+.wreath-wrap{position:relative;z-index:2;display:grid;justify-items:center;gap:26px;text-align:center;padding:20px}
+.wreath{position:relative;width:min(78vw,380px);aspect-ratio:1}
+.wreath svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.wreath .mono{position:absolute;inset:0;display:grid;place-items:center;align-content:center}
+.wreath .mono b{font-family:"Mirza",serif;font-weight:600;font-size:clamp(46px,11vw,72px);line-height:1;color:var(--leaf)}
+.wreath .mono span{font-size:13px;color:var(--mute);margin-top:10px;letter-spacing:.06em}
+.gate .k{font-size:15px;color:var(--mute);opacity:0}
+.enter{opacity:0;position:relative;padding:15px 34px;border-radius:999px;background:var(--leaf);color:var(--paper);border:0;cursor:pointer;font-size:17px;font-weight:400;
+  display:inline-flex;align-items:center;gap:12px;overflow:hidden;transition:transform .4s var(--ease)}
+.enter:hover{transform:translateY(-2px)}
+.enter svg{width:18px;height:18px;transition:transform .5s var(--ease)}
+.enter:hover svg{transform:translateX(-4px) rotate(-10deg)}
+
+/* ───────── NAV / SOUND ───────── */
+.top{position:fixed;z-index:60;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top)) clamp(16px,3vw,34px) 14px;pointer-events:none;opacity:0}
+.top .brand{font-family:"Mirza",serif;font-size:22px;font-weight:600;color:var(--leaf);pointer-events:auto}
+.top .brand .fr{font-size:16px;color:var(--rose);margin:0 4px}
+.chap{display:flex;gap:6px;align-items:center;pointer-events:auto}
+.chap i{width:22px;height:2px;border-radius:2px;background:rgba(47,61,44,.18);overflow:hidden;position:relative}
+.chap i b{position:absolute;inset:0;background:var(--leaf);transform:scaleX(0);transform-origin:right}
+.snd{pointer-events:auto;display:flex;gap:10px;align-items:center;padding:9px 14px;border-radius:999px;background:rgba(246,242,232,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(47,61,44,.15);cursor:pointer;font-size:13px;color:var(--leaf)}
+.snd svg{width:30px;height:14px}
+.snd path{fill:none;stroke:var(--leaf);stroke-width:1.4;stroke-linecap:round}
+.snd.muted path{animation:none!important;opacity:.35}
+
+/* ───────── HORIZONTAL BOOK ───────── */
+.book{position:relative;height:100svh;overflow:hidden}
+.track{position:absolute;top:0;right:0;height:100%;display:flex;will-change:transform}
+.panel{position:relative;flex:0 0 100vw;height:100%;display:grid;align-items:center;padding:clamp(80px,12vh,120px) clamp(20px,6vw,90px) clamp(60px,10vh,90px);overflow:hidden}
+.panel .num{position:absolute;top:clamp(80px,13vh,120px);left:clamp(20px,6vw,90px);font-family:"Fraunces",serif;font-style:italic;font-size:clamp(14px,1.4vw,16px);color:var(--mute);direction:ltr}
+.panel .num b{font-size:clamp(60px,9vw,130px);font-weight:300;color:var(--sage-2);display:block;line-height:.9}
+.eyebrow{font-size:14px;color:#9c5d50;letter-spacing:.04em;display:flex;gap:10px;align-items:center}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.vine{position:absolute;pointer-events:none;overflow:visible}
+.vine path.stem{fill:none;stroke:var(--sage);stroke-width:1.4;stroke-linecap:round}
+.lf{fill:var(--sage-2);transform-box:fill-box;transform-origin:0 50%}
+.lf.d{fill:var(--sage)}
+.fl{fill:var(--blush);transform-box:fill-box;transform-origin:50% 50%}
+
+/* P1 cover */
+.p1{grid-template-columns:1fr 1fr;gap:6vw}
+.p1 h2{font-family:"Mirza",serif;font-weight:500;font-size:clamp(44px,6.4vw,104px);line-height:1.25;color:var(--leaf);margin-top:14px}
+.p1 p{font-size:clamp(17px,1.6vw,20px);color:var(--mute);max-width:440px;margin-top:20px}
+.p1 .ph{position:relative;height:min(68vh,620px);border-radius:260px 260px 18px 18px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(47,61,44,.5)}
+.p1 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.2)}
+.p1 .hint{position:absolute;bottom:clamp(24px,5vh,46px);right:clamp(20px,6vw,90px);display:flex;gap:12px;align-items:center;font-size:14px;color:var(--mute)}
+.p1 .hint .arr{width:44px;height:1px;background:var(--mute);position:relative;overflow:hidden}
+.p1 .hint .arr::after{content:"";position:absolute;inset:0;background:var(--leaf);animation:slide 1.8s var(--ease) infinite}
+@keyframes slide{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+
+/* P2 promise */
+.p2{text-align:center;justify-items:center;background:radial-gradient(60% 60% at 50% 50%,#fbf8f0,transparent)}
+.p2 .inv{font-size:clamp(20px,2.4vw,30px);color:var(--mute);margin-top:18px}
+.p2 .names{font-family:"Mirza",serif;font-weight:600;line-height:1.15;color:var(--leaf);margin-top:10px;display:grid;justify-items:center}
+.p2 .names .n{font-size:clamp(84px,14vw,220px);display:block}
+.p2 .names .amp{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(50px,7vw,110px);color:var(--rose);line-height:.6;margin:-.05em 0}
+.p2 .line{width:1px;height:70px;background:linear-gradient(var(--sage),transparent);margin:22px auto 0}
+
+/* P3 date */
+.p3{grid-template-columns:1.05fr 1fr;gap:5vw}
+.p3 .d-big{font-family:"Mirza",serif;font-weight:600;font-size:clamp(150px,22vw,330px);line-height:.95;color:var(--leaf)}
+.p3 .d-row{display:flex;gap:24px;align-items:baseline;flex-wrap:wrap}
+.p3 .d-meta{display:grid;gap:4px;font-size:clamp(20px,2.2vw,28px);color:var(--ink)}
+.p3 .d-meta small{font-size:15px;color:var(--mute)}
+.p3 .pill{display:inline-flex;margin-top:22px;padding:10px 20px;border-radius:999px;border:1px solid rgba(47,61,44,.2);font-size:17px;gap:10px;align-items:center}
+.rings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);max-width:440px}
+.ring{position:relative;aspect-ratio:1;display:grid;place-items:center;text-align:center}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg) scaleX(-1)}
+.ring circle{fill:none;stroke-width:2}
+.ring .bg{stroke:rgba(47,61,44,.1)}
+.ring .fg{stroke:var(--sage);stroke-linecap:round;transition:stroke-dashoffset .9s var(--ease)}
+.ring b{display:block;font-family:"Mirza",serif;font-weight:600;font-size:clamp(34px,4.6vw,62px);line-height:1;color:var(--leaf)}
+.ring span{font-size:14px;color:var(--mute)}
+
+/* P4 place */
+.p4{grid-template-columns:1fr;align-content:center;gap:22px}
+.p4 .head{padding-left:clamp(0px,12vw,170px);display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.p4 h3{font-family:"Mirza",serif;font-weight:500;font-size:clamp(38px,4.6vw,70px);line-height:1.2;color:var(--leaf)}
+.p4 .vg{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(22px,2.4vw,34px);color:var(--rose);direction:ltr}
+.plan{position:relative;width:100%;max-width:min(1200px,calc((100svh - 300px) * 16 / 9));margin:0 auto;aspect-ratio:16/9;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(47,61,44,.55)}
+.plan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.plan::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(20,28,18,.35));pointer-events:none}
+.spot{position:absolute;z-index:2;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:0;background:none;cursor:pointer}
+.spot::before{content:"";position:absolute;inset:12px;border-radius:50%;background:var(--paper);box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.spot::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--paper);animation:sp 2.2s var(--ease) infinite}
+@keyframes sp{from{transform:scale(.5);opacity:1}to{transform:scale(1.4);opacity:0}}
+.spot .card{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,8px);min-width:180px;padding:12px 16px;border-radius:14px;background:var(--paper);color:var(--ink);
+  text-align:center;box-shadow:0 20px 40px -10px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.4s var(--ease);white-space:nowrap}
+.spot .card b{display:block;font-family:"Mirza",serif;font-size:22px;font-weight:600;color:var(--leaf);line-height:1.3}
+.spot .card span{font-size:14px;color:var(--mute)}
+.spot.on .card,.spot:hover .card,.spot:focus-visible .card{opacity:1;transform:translate(-50%,0)}
+.spot.on{z-index:3}
+.legend{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.legend button{padding:8px 16px;border-radius:999px;border:1px solid rgba(47,61,44,.2);background:transparent;cursor:pointer;font-size:15px;transition:.3s}
+.legend button.on{background:var(--leaf);color:var(--paper);border-color:var(--leaf)}
+
+/* P5 final */
+.p5{grid-template-columns:1fr 1fr;gap:5vw}
+.p5 h2{font-family:"Mirza",serif;font-weight:500;font-size:clamp(48px,6.6vw,110px);line-height:1.25;color:var(--leaf)}
+.p5 .dua{margin-top:20px;font-size:clamp(17px,1.7vw,21px);color:var(--mute)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;cursor:pointer;font-size:16px;font-weight:400;border:1px solid var(--leaf);transition:transform .35s var(--ease),background .35s,color .35s}
+.btn svg{width:18px;height:18px}
+.btn.solid{background:var(--leaf);color:var(--paper)}
+.btn.out{background:transparent;color:var(--leaf)}
+.btn:hover{transform:translateY(-3px)}
+.btn.out:hover{background:var(--leaf);color:var(--paper)}
+.pop{position:relative}
+.pop .menu{position:absolute;bottom:calc(100% + 8px);right:0;min-width:220px;display:grid;padding:8px;border-radius:16px;background:#fff;box-shadow:0 20px 50px -10px rgba(40,50,30,.3);
+  opacity:0;pointer-events:none;transform:translateY(6px);transition:.3s var(--ease);z-index:5}
+.pop .menu.open{opacity:1;pointer-events:auto;transform:none}
+.pop .menu a{padding:10px 14px;border-radius:10px}
+.pop .menu a:hover{background:var(--paper)}
+.map{position:relative;height:min(62vh,560px);border-radius:24px;overflow:hidden;border:8px solid #fff;box-shadow:0 40px 80px -40px rgba(47,61,44,.5)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) sepia(.25) hue-rotate(40deg) saturate(1.1)}
+.map .lbl{position:absolute;top:12px;right:12px;z-index:2;padding:6px 14px;border-radius:999px;background:var(--paper);font-size:14px}
+
+/* ───────── OUTRO ───────── */
+.outro{position:relative;padding:18vh 20px 16vh;text-align:center;background:var(--leaf);color:var(--paper);overflow:hidden}
+.outro .q{font-family:"Mirza",serif;font-size:clamp(34px,5vw,64px);line-height:1.4}
+.outro .sig{margin-top:30px;font-family:"Fraunces",serif;font-style:italic;font-weight:300;letter-spacing:.3em;color:var(--sage-2);direction:ltr;font-size:14px}
+.outro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.outro .q,.outro .sig{position:relative}
+
+@media (max-width:860px){
+  .p1,.p3,.p5{grid-template-columns:1fr;align-content:center;gap:22px}
+  .p1 .ph{height:34vh;border-radius:200px 200px 16px 16px;order:-1}
+  .p1 h2{font-size:clamp(38px,10vw,56px)}
+  .p3 .d-big{font-size:clamp(110px,30vw,160px)}
+  .rings{grid-template-columns:repeat(4,minmax(0,1fr));max-width:none;gap:8px}
+  .ring b{font-size:26px}.ring span{font-size:12px}
+  .p5 .map{height:30vh}
+  .p5 h2{font-size:clamp(36px,9vw,52px)}
+  .panel .num b{font-size:46px}
+  .chap{display:none}
+  .p4 .head{padding-left:0;padding-top:40px}
+  .spot .card{min-width:140px;padding:8px 12px}.spot .card b{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body class="locked">
+
+<!-- GATE -->
+<div class="gate" id="gate">
+  <div class="leafL" id="dL"></div><div class="leafR" id="dR"></div>
+  <div class="wreath-wrap" id="wrap">
+    <div class="wreath">
+      <svg viewBox="0 0 200 200" id="wreathSvg" aria-hidden="true"></svg>
+      <div class="mono"><b>أ <span class="fr" style="font-size:.5em;color:var(--rose);margin:0 .1em">&amp;</span> د</b><span>١٨ · ١٢ · ٢٠٢٦</span></div>
+    </div>
+    <p class="k" id="gk">حكاية من خمسة فصول… والفصل الأخير بيكم</p>
+    <button class="enter" id="enter">ادخل الحديقة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c0-6 3-10 9-12-6 0-9 3-9 3s-3-3-9-3c6 2 9 6 9 12z"/></svg></button>
+  </div>
+</div>
+
+<header class="top" id="top">
+  <div class="brand">أحمد<span class="fr">&amp;</span>دينا</div>
+  <div class="chap" id="chap"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  <button class="snd" id="snd" aria-label="كتم الموسيقى"><svg viewBox="0 0 30 14"><path id="sw" d="M1 7 Q4.5 1 8 7 T15 7 T22 7 T29 7"/></svg><span id="sndT">موسيقى</span></button>
+</header>
+
+<main>
+  <section class="book" id="book">
+    <div class="track" id="track">
+
+      <!-- 01 -->
+      <article class="panel p1">
+        <div class="num">Chapter<b>01</b></div>
+        <div>
+          <div class="eyebrow">الفصل الأول · البداية</div>
+          <h2 class="split">قلبان، ووعدٌ، وبيتٌ يُبنى على المودّة والرحمة.</h2>
+          <p>في حديقة على النيل، بين النخل والورد الأبيض… بتبدأ حكاية أحمد ودينا.</p>
+        </div>
+        <div class="ph"><img src="assets/venue.webp" alt="ممر الورد الأبيض والبرجولا في Villa Garden على النيل" class="par"></div>
+        <div class="hint"><span>اسحب لتقلب الصفحات</span><span class="arr"></span></div>
+        <svg class="vine" style="bottom:-10px;left:-20px;width:46vw;height:160px" viewBox="0 0 600 160" data-vine></svg>
+      </article>
+
+      <!-- 02 -->
+      <article class="panel p2">
+        <div class="num">Chapter<b>02</b></div>
+        <div>
+          <div class="eyebrow" style="justify-content:center">الفصل الثاني · الوعد</div>
+          <p class="inv">يسرنا دعوتكم لحفل كتب كتاب</p>
+          <h1 class="names" aria-label="أحمد & دينا"><span class="n" id="nA">أحمد</span><span class="amp">&amp;</span><span class="n" id="nD">دينا</span></h1>
+          <div class="line"></div>
+        </div>
+        <svg class="vine" style="top:12%;right:-30px;width:30vw;height:200px" viewBox="0 0 400 200" data-vine></svg>
+        <svg class="vine" style="bottom:6%;left:-30px;width:30vw;height:200px;transform:scaleX(-1)" viewBox="0 0 400 200" data-vine></svg>
+      </article>
+
+      <!-- 03 -->
+      <article class="panel p3">
+        <div class="num">Chapter<b>03</b></div>
+        <div>
+          <div class="eyebrow">الفصل الثالث · الموعد</div>
+          <div class="d-row">
+            <div class="d-big">١٨</div>
+            <div class="d-meta"><span>الجمعة</span><span>ديسمبر ٢٠٢٦</span><small>الحفل يبدأ مع غروب الشمس على النيل</small></div>
+          </div>
+          <div class="pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>الساعة ٥ عصراً</div>
+        </div>
+        <div>
+          <p style="color:var(--mute);margin-bottom:14px">باقي على الحكاية</p>
+          <div class="rings" id="rings"></div>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="panel p4">
+        <div class="num">Chapter<b>04</b></div>
+        <div class="head">
+          <div><div class="eyebrow">الفصل الرابع · المكان</div><h3>ڤيلا جاردن <span class="vg">Villa Garden</span></h3></div>
+          <div class="legend" id="legend">
+            <button data-s="0">المنصّة</button><button data-s="1">الممر</button><button data-s="2">الطاولات</button><button data-s="3">النيل</button>
+          </div>
+        </div>
+        <div class="plan" id="plan">
+          <img src="assets/aerial.webp" alt="منظر جوي لحديقة Villa Garden: المنصة والممر والطاولات على النيل">
+          <button class="spot" style="left:44%;top:52%" aria-label="المنصّة"><span class="card"><b>المنصّة</b><span>هنا يُكتب الكتاب</span></span></button>
+          <button class="spot" style="left:74%;top:72%" aria-label="الممر"><span class="card"><b>الممر</b><span>طريق الفرحة</span></span></button>
+          <button class="spot" style="left:44%;top:84%" aria-label="الطاولات"><span class="card"><b>الطاولات</b><span>مكانكم بينّا</span></span></button>
+          <button class="spot" style="left:14%;top:30%" aria-label="النيل"><span class="card"><b>النيل</b><span>شاهد على الوعد</span></span></button>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="panel p5">
+        <div class="num">Chapter<b>05</b></div>
+        <div>
+          <div class="eyebrow">الفصل الأخير</div>
+          <h2 class="split">وبوجودكم… تكتمل الحكاية.</h2>
+          <p class="dua">بارك الله لهما، وبارك عليهما، وجمع بينهما في خير</p>
+          <div class="btns">
+            <a class="btn solid" href="https://maps.app.goo.gl/eYoe1mGuUmShnoKu8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>افتح الخريطة</a>
+            <div class="pop">
+              <button class="btn out" id="calBtn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>احفظ الموعد</button>
+              <div class="menu" id="calMenu"><a id="gcal" target="_blank" rel="noopener">Google Calendar</a><a id="ics" download="ahmed-dina.ics">تقويم الآيفون / Outlook</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="map"><span class="lbl">Villa Garden · ڤيلا جاردن</span>
+          <iframe title="موقع Villa Garden" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=30.1226195,31.2085768&z=16&hl=ar&output=embed"></iframe></div>
+        <svg class="vine" style="bottom:-10px;right:-20px;width:40vw;height:160px;transform:scaleX(-1)" viewBox="0 0 600 160" data-vine></svg>
+      </article>
+    </div>
+  </section>
+
+  <section class="outro" id="outro">
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <p class="q">مستنيينكم… علشان الفرحة تكمل</p>
+    <p class="sig">AHMED &amp; DINA · 18.12.2026</p>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const mobile=innerWidth<860,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+gsap.registerPlugin(ScrollTrigger);
+if('scrollRestoration' in history)history.scrollRestoration='manual';scrollTo(0,0);
+
+/* ── music: crossfade loop ── */
+const M=(()=>{let ctx,buf,out,on=true,fb;const XF=1.8;
+  try{ctx=new (window.AudioContext||window.webkitAudioContext)();out=ctx.createGain();out.gain.value=0;out.connect(ctx.destination)}catch(e){}
+  const ready=ctx?fetch('assets/music.mp3').then(r=>r.arrayBuffer()).then(a=>new Promise((s,j)=>ctx.decodeAudioData(a,s,j))).then(b=>buf=b).catch(()=>null):Promise.resolve();
+  function q(at){const s=ctx.createBufferSource(),g=ctx.createGain(),d=buf.duration;s.buffer=buf;s.connect(g).connect(out);
+    g.gain.setValueAtTime(0,at);g.gain.linearRampToValueAtTime(1,at+XF);g.gain.setValueAtTime(1,at+d-XF);g.gain.linearRampToValueAtTime(0,at+d);s.start(at);s.stop(at+d+.1);
+    const n=at+d-XF;setTimeout(()=>q(n),Math.max(0,(n-ctx.currentTime-1.2)*1000))}
+  const fbk=()=>{fb=new Audio('assets/music.mp3');fb.loop=true;fb.volume=.75;fb.play().catch(()=>{})};
+  return{start(){if(!ctx)return fbk();ctx.resume();ready.then(()=>{if(!buf)return fbk();q(ctx.currentTime+.05);out.gain.linearRampToValueAtTime(.8,ctx.currentTime+3)})},
+    toggle(){on=!on;if(fb)fb.muted=!on;else if(ctx){const t=ctx.currentTime;out.gain.cancelScheduledValues(t);out.gain.setValueAtTime(out.gain.value,t);out.gain.linearRampToValueAtTime(on?.8:0,t+.5)}return on}}})();
+const sw=gsap.to('#sw',{attr:{d:'M1 7 Q4.5 13 8 7 T15 7 T22 7 T29 7'},duration:.5,repeat:-1,yoyo:true,ease:'sine.inOut',paused:true});
+$('#snd').onclick=()=>{const on=M.toggle();$('#snd').classList.toggle('muted',!on);$('#sndT').textContent=on?'موسيقى':'صامت';on?sw.play():sw.pause()};
+
+/* ── botanical generator ── */
+const NS='http://www.w3.org/2000/svg';
+function leaf(x,y,ang,len,dark){const p=document.createElementNS(NS,'path');const w=len*.42;
+  p.setAttribute('d',`M0 0 C ${len*.3} ${-w}, ${len*.75} ${-w*.8}, ${len} 0 C ${len*.75} ${w*.8}, ${len*.3} ${w}, 0 0 Z`);
+  p.setAttribute('transform',`translate(${x} ${y}) rotate(${ang})`);p.setAttribute('class','lf'+(dark?' d':''));return p}
+function flower(x,y,r){const g=document.createElementNS(NS,'g');g.setAttribute('class','fl');g.setAttribute('transform',`translate(${x} ${y})`);
+  for(let i=0;i<5;i++){const e=document.createElementNS(NS,'ellipse');e.setAttribute('rx',r*.55);e.setAttribute('ry',r);e.setAttribute('transform',`rotate(${i*72}) translate(0 ${-r*.8})`);e.setAttribute('fill','#efd4cb');g.appendChild(e)}
+  const c=document.createElementNS(NS,'circle');c.setAttribute('r',r*.45);c.setAttribute('fill','#d9a99c');g.appendChild(c);return g}
+function growVine(svg){const [,, W,H]=svg.getAttribute('viewBox').split(' ').map(Number);
+  const pts=[];const n=6;for(let i=0;i<=n;i++)pts.push([W*i/n,H*.62+Math.sin(i*1.3)*H*.22]);
+  let d=`M${pts[0][0]} ${pts[0][1]}`;for(let i=1;i<pts.length;i++){const [x0,y0]=pts[i-1],[x1,y1]=pts[i];d+=` Q ${(x0+x1)/2} ${y0+(i%2?-H*.3:H*.3)}, ${x1} ${y1}`}
+  const stem=document.createElementNS(NS,'path');stem.setAttribute('d',d);stem.setAttribute('class','stem');svg.appendChild(stem);
+  const L=stem.getTotalLength();stem.style.strokeDasharray=L;stem.style.strokeDashoffset=L;
+  const items=[];const count=Math.round(W/34);
+  for(let i=1;i<count;i++){const t=i/count,p=stem.getPointAtLength(L*t),p2=stem.getPointAtLength(Math.min(L,L*t+2));const a=Math.atan2(p2.y-p.y,p2.x-p.x)*180/Math.PI;
+    const side=i%2?-1:1;const lf=leaf(p.x,p.y,a+side*(45+Math.random()*25),14+Math.random()*12,Math.random()<.35);svg.appendChild(lf);items.push([t,lf]);
+    if(i%4===2){const f=flower(p.x+side*8,p.y+side*10,5+Math.random()*3);svg.appendChild(f);items.push([t,f])}}
+  items.forEach(([,el])=>gsap.set(el,{scale:0}));return{stem,L,items}}
+function vineTween(v,tl,at,dur){tl.to(v.stem,{strokeDashoffset:0,duration:dur,ease:'none'},at);v.items.forEach(([t,el])=>tl.to(el,{scale:1,duration:.15*dur,ease:'back.out(3)'},at+t*dur*.95))}
+
+/* gate wreath */
+(()=>{const svg=$('#wreathSvg');const cx=100,cy=100,R=84;
+  const make=(from,to,dir)=>{let d='';const steps=40;for(let i=0;i<=steps;i++){const a=(from+(to-from)*i/steps)*Math.PI/180;const r=R+Math.sin(i*.9)*2.5;const x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)}
+    const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');p.setAttribute('stroke','#7d8f6e');p.setAttribute('stroke-width','1');svg.appendChild(p);
+    const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;const items=[];
+    for(let i=1;i<22;i++){const t=i/22,q=p.getPointAtLength(L*t),q2=p.getPointAtLength(Math.min(L,L*t+1.5));const ang=Math.atan2(q2.y-q.y,q2.x-q.x)*180/Math.PI;
+      [-1,1].forEach(s=>{const l=leaf(q.x,q.y,ang+s*(40+Math.random()*20)+(dir<0?180:0),9+Math.random()*6,Math.random()<.4);svg.appendChild(l);gsap.set(l,{scale:0});items.push([t,l])});
+      if(i%5===0){const f=flower(q.x,q.y,4);svg.appendChild(f);gsap.set(f,{scale:0});items.push([t,f])}}
+    return{stem:p,items}};
+  const a=make(95,-85,1),b=make(85,265,-1);
+  const tl=gsap.timeline({delay:.4});
+  [a,b].forEach(v=>{tl.to(v.stem,{strokeDashoffset:0,duration:2.4,ease:'power2.inOut'},0);v.items.forEach(([t,el])=>tl.to(el,{scale:1,duration:.5,ease:'back.out(3)'},.2+t*2.2))});
+  tl.from('.wreath .mono',{opacity:0,scale:.9,duration:1.4,ease:'expo.out'},1).to('#gk',{opacity:1,duration:1},1.8).to('#enter',{opacity:1,duration:1},2.2);
+})();
+
+let entered=false;
+$('#enter').onclick=()=>{if(entered)return;entered=true;M.start();sw.play();
+  gsap.timeline()
+    .to('#wrap',{scale:1.6,opacity:0,duration:1.1,ease:'power3.in'})
+    .to('#dL',{xPercent:-100,duration:1.4,ease:'expo.inOut'},.6).to('#dR',{xPercent:100,duration:1.4,ease:'expo.inOut'},.6)
+    .add(()=>{$('#gate').style.background='transparent'},.6)
+    .add(()=>{$('#gate')?.remove();document.body.classList.remove('locked');scrollTo(0,0);ScrollTrigger.refresh();intro()},1.9)
+    .to('#top',{opacity:1,duration:1},1.6);
+};
+
+/* ── split headline words ── */
+$$('.split').forEach(h=>{h.innerHTML=h.textContent.split(' ').map(w=>`<span style="display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em"><span class="wi" style="display:inline-block">${w}</span></span>`).join(' ')});
+const p1w=$$('.p1 .wi');gsap.set(p1w,{yPercent:110});gsap.set('.p1 .eyebrow,.p1 p,.p1 .hint',{opacity:0,y:20});gsap.set('.p1 .ph',{clipPath:'inset(100% 0 0 0 round 260px 260px 18px 18px)'});
+function intro(){gsap.timeline()
+  .to('.p1 .ph',{clipPath:'inset(0% 0 0 0 round 260px 260px 18px 18px)',duration:1.6,ease:'expo.inOut'})
+  .to('.p1 .ph img',{scale:1.05,duration:2.4,ease:'expo.out'},.3)
+  .to('.p1 .eyebrow',{opacity:1,y:0,duration:.8},.5)
+  .to(p1w,{yPercent:0,duration:1.2,stagger:.07,ease:'expo.out'},.6)
+  .to('.p1 p,.p1 .hint',{opacity:1,y:0,duration:1,stagger:.15},1.2);
+  const v=vines[0];const t=gsap.timeline({delay:.8});vineTween(v,t,0,2.4);
+}
+
+/* ── horizontal book ── */
+const vines=$$('[data-vine]').map(growVine);
+const track=$('#track'),panels=$$('.panel');
+const dist=()=>track.scrollWidth-innerWidth;
+const N=panels.length;
+// panel entrance timelines (index-driven, so it works for right-to-left page turning)
+const P=[null,
+  gsap.timeline({paused:true})
+    .from('.p2 .eyebrow,.p2 .inv',{opacity:0,y:20,stagger:.1,duration:1})
+    .from('#nA',{opacity:0,y:80,rotate:6,filter:'blur(14px)',duration:1.4,ease:'expo.out'},.1)
+    .from('.p2 .amp',{scale:0,rotate:-90,duration:1.2,ease:'back.out(2)'},.4)
+    .from('#nD',{opacity:0,y:80,rotate:-6,filter:'blur(14px)',duration:1.4,ease:'expo.out'},.5)
+    .from('.p2 .line',{scaleY:0,transformOrigin:'top',duration:1},1),
+  gsap.timeline({paused:true})
+    .from('.p3 .eyebrow',{opacity:0,y:20,duration:.8})
+    .from('.p3 .d-big',{opacity:0,x:-80,duration:1.4,ease:'expo.out'},.1)
+    .from('.p3 .d-meta > *, .p3 .pill, .ring',{opacity:0,y:30,stagger:.08,duration:1,ease:'expo.out'},.3),
+  gsap.timeline({paused:true})
+    .from('.p4 .head > *',{opacity:0,y:24,stagger:.12,duration:1})
+    .from('#plan',{scale:.86,borderRadius:'200px',duration:1.4,ease:'expo.out'},0)
+    .from('#plan img',{scale:1.3,duration:2.2,ease:'expo.out'},0),
+  gsap.timeline({paused:true})
+    .from('.p5 .eyebrow',{opacity:0,y:20,duration:.8})
+    .from('.p5 .wi',{yPercent:110,stagger:.08,duration:1.2,ease:'expo.out'},.1)
+    .from('.p5 .dua,.p5 .btns,.p5 .map',{opacity:0,y:30,stagger:.12,duration:1.2,ease:'expo.out'},.4)
+];
+// vines per panel, scrubbed by local progress
+const vineTLs=vines.map((v,k)=>{if(k===0)return null;const tl=gsap.timeline({paused:true});vineTween(v,tl,0,1);return[[...panels].indexOf(v.stem.closest('.panel')),tl]}).filter(Boolean);
+const spots=$$('.spot'),legend=$$('#legend button');let tour=null,tourI=0;
+function show(i){spots.forEach((s,k)=>s.classList.toggle('on',k===i));legend.forEach((b,k)=>b.classList.toggle('on',k===i))}
+spots.forEach((s,i)=>s.addEventListener('click',()=>{clearInterval(tour);tour=0;show(i)}));
+legend.forEach((b,i)=>b.addEventListener('click',()=>{clearInterval(tour);tour=0;show(i)}));
+function startTour(){if(tour)return;show(tourI);tour=setInterval(()=>{tourI=(tourI+1)%spots.length;show(tourI)},2600)}
+function stopTour(){clearInterval(tour);tour=null}
+const state=P.map(()=>false);
+function onBook(p){
+  $$('#chap i b').forEach((b,i)=>gsap.set(b,{scaleX:Math.max(0,Math.min(1,p-i+1))}));
+  gsap.set('.p1 .par',{xPercent:Math.min(1,p)*14});
+  for(let i=1;i<N;i++){const on=p>i-.55;if(on!==state[i]){state[i]=on;on?P[i].timeScale(1).play():P[i].timeScale(2).reverse()}}
+  vineTLs.forEach(([i,tl])=>tl.progress(Math.max(0,Math.min(1,(p-(i-1))*1.1))));
+  (p>2.55&&p<3.6)?startTour():stopTour();
+}
+const H=gsap.to(track,{x:()=>dist(),ease:'none',scrollTrigger:{trigger:'#book',pin:true,scrub:mobile?.6:1,start:'top top',end:()=>'+='+dist()*(mobile?1:1.1),invalidateOnRefresh:true,
+  snap:{snapTo:1/(N-1),duration:{min:.3,max:.8},delay:.1,ease:'power2.inOut'}}});
+// smooth p from the actual track position (follows the scrub lag)
+gsap.ticker.add(()=>{const x=gsap.getProperty(track,'x');const d=dist();if(d>0)onBook(x/d*(N-1))});
+
+/* ── countdown rings ── */
+const ar=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const target=new Date('2026-12-18T17:00:00+02:00').getTime();
+const U=[['d','يوم',100],['h','ساعة',24],['m','دقيقة',60],['s','ثانية',60]];const C=2*Math.PI*46;
+$('#rings').innerHTML=U.map(([k,l])=>`<div class="ring"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="46"/><circle class="fg" id="r${k}" cx="50" cy="50" r="46" stroke-dasharray="${C}" stroke-dashoffset="${C}"/></svg><div><b id="v${k}">٠</b><span>${l}</span></div></div>`).join('');
+function tick(){const d=Math.max(0,target-Date.now());const v={d:Math.floor(d/864e5),h:Math.floor(d/36e5)%24,m:Math.floor(d/6e4)%60,s:Math.floor(d/1e3)%60};
+  U.forEach(([k,,max])=>{$('#v'+k).textContent=ar(v[k]);$('#r'+k).style.strokeDashoffset=C*(1-v[k]/max)})}
+tick();setInterval(tick,1000);
+
+/* ── calendar ── */
+$('#gcal').href='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:'كتب كتاب أحمد & دينا',dates:'20261218T150000Z/20261218T190000Z',details:'يسرنا دعوتكم لحفل كتب كتاب أحمد & دينا',location:'Villa Garden — https://maps.app.goo.gl/eYoe1mGuUmShnoKu8'});
+$('#ics').href=URL.createObjectURL(new Blob([['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AhmedDina//AR','BEGIN:VEVENT','UID:ahmed-dina-20261218@invite','DTSTAMP:20261008T000000Z','DTSTART:20261218T150000Z','DTEND:20261218T190000Z','SUMMARY:كتب كتاب أحمد & دينا','LOCATION:Villa Garden','DESCRIPTION:https://maps.app.goo.gl/eYoe1mGuUmShnoKu8','BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:بكرة كتب كتاب أحمد & دينا','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n')],{type:'text/calendar'}));
+$('#calBtn').onclick=e=>{e.stopPropagation();const o=$('#calMenu').classList.toggle('open');$('#calBtn').setAttribute('aria-expanded',o)};
+document.addEventListener('click',()=>$('#calMenu').classList.remove('open'));
+
+/* ── outro: petal confetti burst ── */
+(()=>{const c=$('#confetti'),x=c.getContext('2d');let W,H,P=[],run=false,d=1;const cols=['#efd4cb','#e7c6bb','#a9b89a','#f6f2e8','#d9a99c'];
+  function rs(){d=Math.min(devicePixelRatio,2);W=c.width=c.clientWidth*d;H=c.height=c.clientHeight*d}rs();addEventListener('resize',rs);
+  function burst(){for(let i=0;i<(mobile?60:120);i++)P.push({x:W/2,y:H*.6,vx:(Math.random()-.5)*14*d,vy:(-6-Math.random()*10)*d,r:Math.random()*6,vr:(Math.random()-.5)*.3,s:(4+Math.random()*6)*d,c:cols[Math.random()*5|0],f:Math.random()*6});if(!run){run=true;loop()}}
+  function loop(){x.clearRect(0,0,W,H);P=P.filter(p=>p.y<H+40);for(const p of P){p.vy+=.18*d;p.vx*=.99;p.vy*=.99;p.x+=p.vx+Math.sin(p.f+=.05)*d;p.y+=p.vy;p.r+=p.vr;
+    x.save();x.translate(p.x,p.y);x.rotate(p.r);x.scale(Math.cos(p.f),1);x.fillStyle=p.c;x.beginPath();x.ellipse(0,0,p.s*.6,p.s,0,0,7);x.fill();x.restore()}
+    if(P.length)requestAnimationFrame(loop);else run=false}
+  ScrollTrigger.create({trigger:'#outro',start:'top 60%',onEnter:()=>!reduce&&burst()});
+  gsap.from('.outro .q',{opacity:0,y:40,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'#outro',start:'top 70%'}});
+})();
+})();
+</script>
+</body>
+</html>
