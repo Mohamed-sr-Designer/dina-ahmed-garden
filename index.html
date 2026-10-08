@@ -11,17 +11,18 @@
 <meta property="og:url" content="https://mohamed-sr-designer.github.io/dina-ahmed-garden/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f6f2e8">
+<meta name="color-scheme" content="only light">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;1,9..144,500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#f6f2e8; --paper-2:#efe9da; --leaf:#2f3d2c; --sage:#7d8f6e; --sage-2:#a9b89a; --blush:#e7c6bb; --rose:#c98f83; --ink:#26301f; --mute:#5c6452;
+:root{color-scheme:only light;
+  --paper:#f6f2e8; --paper-2:#efe9da; --leaf:#2f3d2c; --sage:#7d8f6e; --sage-2:#a9b89a; --blush:#e7c6bb; --rose:#c98f83; --rose-ink:#9a594d; --ink:#26301f; --mute:#5c6452;
   --ease:cubic-bezier(.22,.9,.24,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip;max-width:100%}
 html{background:var(--paper)}
-body{font-family:"IBM Plex Sans Arabic",sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;line-height:1.8;font-weight:300}
+body{font-family:"IBM Plex Sans Arabic",sans-serif;color:var(--ink);background:var(--paper);overflow-x:clip;line-height:1.8;font-weight:300}
 body.locked{overflow:hidden;height:100vh}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.35;mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .38 0 0 0 0 .3 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -52,7 +53,7 @@ button{font:inherit;color:inherit}
 /* ───────── NAV / SOUND ───────── */
 .top{position:fixed;z-index:60;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top)) clamp(16px,3vw,34px) 14px;pointer-events:none;opacity:0}
 .top .brand{font-family:"Mirza",serif;font-size:22px;font-weight:600;color:var(--leaf);pointer-events:auto}
-.top .brand .fr{font-size:16px;color:var(--rose);margin:0 4px}
+.top .brand .fr{font-size:16px;color:var(--rose-ink);margin:0 4px}
 .chap{display:flex;gap:6px;align-items:center;pointer-events:auto}
 .chap i{width:22px;height:2px;border-radius:2px;background:rgba(47,61,44,.18);overflow:hidden;position:relative}
 .chap i b{position:absolute;inset:0;background:var(--leaf);transform:scaleX(0);transform-origin:right}
@@ -67,7 +68,7 @@ button{font:inherit;color:inherit}
 .track{position:absolute;top:0;right:0;height:100%;display:flex;will-change:transform}
 .panel{position:relative;flex:0 0 100vw;height:100%;display:grid;align-items:center;padding:clamp(80px,12vh,120px) clamp(20px,6vw,90px) clamp(60px,10vh,90px);overflow:hidden}
 .panel .num{position:absolute;top:clamp(80px,13vh,120px);left:clamp(20px,6vw,90px);font-family:"Fraunces",serif;font-style:italic;font-size:clamp(14px,1.4vw,16px);color:var(--mute);direction:ltr}
-.panel .num b{font-size:clamp(60px,9vw,130px);font-weight:300;color:var(--sage-2);display:block;line-height:.9}
+.panel .num b{font-size:clamp(60px,9vw,130px);font-weight:300;color:var(--sage);display:block;line-height:.9}
 .eyebrow{font-size:14px;color:#9c5d50;letter-spacing:.04em;display:flex;gap:10px;align-items:center}
 .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
 .vine{position:absolute;pointer-events:none;overflow:visible}
@@ -92,7 +93,7 @@ button{font:inherit;color:inherit}
 .p2 .inv{font-size:clamp(20px,2.4vw,30px);color:var(--mute);margin-top:18px}
 .p2 .names{font-family:"Mirza",serif;font-weight:600;line-height:1.15;color:var(--leaf);margin-top:10px;display:grid;justify-items:center}
 .p2 .names .n{font-size:clamp(84px,14vw,220px);display:block}
-.p2 .names .amp{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(50px,7vw,110px);color:var(--rose);line-height:.6;margin:-.05em 0}
+.p2 .names .amp{font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(50px,7vw,110px);color:var(--rose-ink);line-height:.6;margin:-.05em 0}
 .p2 .line{width:1px;height:70px;background:linear-gradient(var(--sage),transparent);margin:22px auto 0}
 
 /* P3 date */
@@ -115,7 +116,7 @@ button{font:inherit;color:inherit}
 .p4{grid-template-columns:1fr;align-content:center;gap:22px}
 .p4 .head{padding-left:clamp(0px,12vw,170px);display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .p4 h3{font-family:"Mirza",serif;font-weight:500;font-size:clamp(38px,4.6vw,70px);line-height:1.2;color:var(--leaf)}
-.p4 .vg{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(22px,2.4vw,34px);color:var(--rose);direction:ltr}
+.p4 .vg{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(22px,2.4vw,34px);color:var(--rose-ink);direction:ltr}
 .plan{position:relative;width:100%;max-width:min(1200px,calc((100svh - 300px) * 16 / 9));margin:0 auto;aspect-ratio:16/9;border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(47,61,44,.55)}
 .plan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .plan::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(20,28,18,.35));pointer-events:none}
@@ -163,6 +164,9 @@ button{font:inherit;color:inherit}
 
 @media (max-width:860px){
   body::after{display:none}
+  .panel{padding:84px 18px 50px}
+  .panel .num{top:76px}
+  .outro{padding:10vh 20px 9vh}
   .p1 .ph,.plan,.map{box-shadow:0 20px 40px -24px rgba(47,61,44,.45)}
   .p1,.p3,.p5{grid-template-columns:1fr;align-content:center;gap:22px}
   .p1 .ph{height:34vh;border-radius:200px 200px 16px 16px;order:-1}
@@ -188,7 +192,7 @@ button{font:inherit;color:inherit}
   <div class="wreath-wrap" id="wrap">
     <div class="wreath">
       <svg viewBox="0 0 200 200" id="wreathSvg" aria-hidden="true"></svg>
-      <div class="mono"><b>أ <span class="fr" style="font-size:.5em;color:var(--rose);margin:0 .1em">&amp;</span> د</b><span>١٨ · ١٢ · ٢٠٢٦</span></div>
+      <div class="mono"><b>أ <span class="fr" style="font-size:.5em;color:var(--rose-ink);margin:0 .1em">&amp;</span> د</b><span>١٨ · ١٢ · ٢٠٢٦</span></div>
     </div>
     <p class="k" id="gk">حكاية من خمسة فصول… والفصل الأخير بيكم</p>
     <button class="enter" id="enter">ادخل الحديقة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c0-6 3-10 9-12-6 0-9 3-9 3s-3-3-9-3c6 2 9 6 9 12z"/></svg></button>
